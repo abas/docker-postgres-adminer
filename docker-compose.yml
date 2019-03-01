@@ -1,0 +1,31 @@
+version: '3.1'
+
+networks:
+  local_net:
+    external:
+      name: local
+
+volumes:
+  dbdata:
+    driver: local
+
+services:
+  postgres:
+    image: kankuu/postgres:11.2-alpine
+    container_name: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=your_password
+    networks:
+      - local_net
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - local_net
