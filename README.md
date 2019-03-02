@@ -17,7 +17,7 @@ for connecting other container to DB, make the container to the same network and
 
 ```php
 Host    : postgres
-User    : postgress
+User    : postgres
 Pass    : your_password
 Driver  : psql
 ```
