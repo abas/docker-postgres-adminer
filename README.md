@@ -7,7 +7,7 @@ dokerize postgres and adminer
   $ cd dpa
 
   # Building Image
-  $ docker build -f Dockerfile -t $USER/postgres .
+  $ docker build -f Dockerfile -t kankuu/postgres:11.2-alpine .
 
   # Running Container
   $ docker-compose up -d
