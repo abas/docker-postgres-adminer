@@ -11,6 +11,12 @@ dokerize postgres and adminer
 
   # Running Container
   $ docker-compose up -d
+  
+  # Checking Container
+  $ docker-compose ps
+  
+  # Restarting Container
+  $ docker-compose restart
 ```
 then check http://localhost:8080
 for connecting other container to DB, make the container to the same network and define configuration like bello
